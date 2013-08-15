@@ -1,0 +1,10 @@
+.row
+  %h1 CaptionWatch
+.row
+  .large-5.columns
+    %h3 Send to Congress
+    %form#send-letter
+      %label Address
+      %input#task_name{address: "complaint[name]", type: "text"}
+        %input{type: "submit", value: "Add"}
+      %ul#complaints
