@@ -1,2 +1,0 @@
-class Compliant < ApplicationModel
-end

@@ -1,0 +1,2 @@
+class Complaint < ApplicationModel
+end
