@@ -12,11 +12,30 @@
     / <meta http-equiv="X-UA-Compatible" content="IE=7" />
     / Set the viewport width to device width for mobile
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Untitled"
+    %title= content_for?(:title) ? yield(:title) : "CaptionWatch"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
+    .row
+      .large-12.columns
+        %nav.top-bar
+          %ul.title-area
+            / Title Area
+            %li.name
+              %h1
+                %a{:href => "#"}
+                  CaptionWatch
+            %li.toggle-topbar.menu-icon
+              %a{:href => "#"}
+                %span menu
+          %section.top-bar-section
+            / Right Nav Section
+            %ul.right
+              %li
+                %a{:href => "/"} ABOUT
+              %li
+                %a{:href => "#"} STATS
     = yield
     = javascript_include_tag "application"
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", :type => "text/javascript"}

@@ -1,10 +1,39 @@
 .row
-  %h1 CaptionWatch
+  .large-12.columns
+    .hero
+      %h1 Accessiblity is not a dirty word. Tell Congress!
+      .large-10.columns.large-centered
+        %p The state of captioning accessibilty on various media platforms is dismal. We demand that the US Congress execute legislation outlining clear accessibility requirements to support all Americans.
+        %a.button.large
+          Watch Video
+
+        / %iframe{:allowfullscreen => "1", showinfo: "0", :frameborder => "0", :height => "480", :src => "//www.youtube-nocookie.com/embed/EgSrZ-s3MTY?rel=0", :width => "853"}
 .row
-  .large-5.columns
-    %h3 Send to Congress
-    %form#send-letter
-      %label Address
-      %input#task_name{address: "complaint[name]", type: "text"}
-        %input{type: "submit", value: "Add"}
-      %ul#complaints
+  .letter
+    .large-12.columns
+      %h2 Send to Congress
+      %form#send-letter
+        .large-6.columns
+          .panel
+            %label Company Name
+            %input#task_name{company: "company[name]", type: "text"}
+          .panel
+            %label Product Name
+            %input#task_name{product: "product[name]", type: "text"}
+          .panel
+            %label Url
+            .row.collapse
+              .small-3.large-2.columns
+                %span.prefix http://
+              .small-9.large-10.columns
+                %input{:placeholder => "Enter your URL...", :type => "text"}
+          .panel
+            %label Address
+            %input#task_name{address: "complaint[name]", type: "text"}
+        .large-6.columns.complaint
+          .panel
+            %label Letter <span><a class="button small">ASL</a></span>
+            %textarea#task_name{blurb: "complaint[blurb]", type: "text", class: "blurb", placeholder: "The Washington Post and the Guardian recently published reports based on information provided by an intelligence contractor showing how the NSA and the FBI are gaining broad access to data collected by nine of the leading U.S. Internet companies and sharing this information with foreign governments. As reported, the U.S. government is extracting audio, video, photographs, e-mails, documents, and connection logs that enable analysts to track a person's movements and contacts over time. As a result, the contents of communications of people both abroad and in the U.S. can be swept in without any suspicion of crime or association with a terrorist organization."}
+          .send
+            %input{type: "submit", value: "Send Letter", class: "button expand large"}
+          %ul#complaints

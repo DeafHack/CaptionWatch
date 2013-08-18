@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
 //
 // Foundation Variables
 //
@@ -51,9 +55,9 @@ $em-base: 16 !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
+$body-bg: #BFBFBF;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: 'Varela Round', sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -67,7 +71,7 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
+$primary-color: #8C3E44;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -79,7 +83,7 @@ $default-float: left;
 
 // Inset shadow shiny edges and depressions.
 
-// $shiny-edge-size: 0 1px 0;
+$shiny-edge-size: 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
@@ -137,7 +141,7 @@ $default-float: left;
 // Grid Variables
 //
 
-// $row-width: emCalc(1000);
+$row-width: emCalc(1200);
 // $column-gutter: emCalc(30);
 // $total-columns: 12;
 
@@ -160,10 +164,10 @@ $default-float: left;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: 'Alegreya SC', serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #404040;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -283,21 +287,21 @@ $default-float: left;
 // We use these to style the labels in different ways
 
 // $form-label-pointer: pointer;
-// $form-label-font-size: emCalc(14);
+$form-label-font-size: emCalc(22);
 // $form-label-font-weight: 500;
-// $form-label-font-color: lighten(#000, 30%);
+$form-label-font-color: #0D0D0D;
 // $form-label-bottom-margin: emCalc(3);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: emCalc(14);
+$input-font-size: emCalc(22);
 // $input-bg-color: #fff;
-// $input-focus-bg-color: darken(#fff, 2%);
+$input-focus-bg-color: darken(#fff, 10%);
 // $input-border-color: darken(#fff, 20%);
 // $input-focus-border-color: darken(#fff, 40%);
 // $input-border-style: solid;
-// $input-border-width: 1px;
+$input-border-width: 0px;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: none;
 // $input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
@@ -372,7 +376,7 @@ $default-float: left;
 
 // We use these to control button border styles.
 
-// $button-border-width: 1px;
+$button-border-width: 0px;
 // $button-border-style: solid;
 
 // We use this to set the default radius used throughout the core.
@@ -590,10 +594,10 @@ $default-float: left;
 // We use these to control the basic form styles input styles
 
 // $custom-form-border-color: #ccc;
-// $custom-form-border-size: 1px;
+$custom-form-border-size: 0px;
 // $custom-form-bg: #fff;
 // $custom-form-bg-disabled: #ddd;
-// $custom-form-input-size: 16px;
+$custom-form-input-size: 22px;
 // $custom-form-check-color: #222;
 // $custom-form-check-size: 16px;
 // $custom-form-radio-size: 8px;
@@ -878,9 +882,9 @@ $default-float: left;
 
 // We use these to control the background and border styles
 
-// $panel-bg: darken(#fff, 5%);
+$panel-bg: #8C8C8C;
 // $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-border-size: 0px;
 
 // We use this % to control how much we darken things on hover
 
@@ -894,8 +898,8 @@ $default-float: left;
 
 // We use these to set default font colors
 
-// $panel-font-color: #333;
-// $panel-font-color-alt: #fff;
+$panel-font-color: white;
+$panel-font-color-alt: #fff;
 
 // $panel-header-adjust: true;
 
@@ -1234,11 +1238,11 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: #0D0D0D;
 
 // Height and margin
 
-// $topbar-height: 45px;
+$topbar-height: 65px;
 // $topbar-margin-bottom: emCalc(30);
 
 // Control Input height for top bar
@@ -1248,7 +1252,7 @@ $default-float: left;
 // Controlling the styles for the title in the top bar
 
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17);
+$topbar-title-font-size: emCalc(35);
 
 // Style the top bar dropdown elements
 
@@ -1265,9 +1269,9 @@ $default-float: left;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
-// $topbar-link-font-size: emCalc(13);
-// $topbar-link-hover-lightness: -30%; // Darken by 30%
-// $topbar-link-bg-hover: darken($topbar-bg, 3%);
+$topbar-link-font-size: emCalc(22);
+$topbar-link-hover-lightness: 30%; // Darken by 30%
+$topbar-link-bg-hover: lighten($topbar-bg, 30%);
 // $topbar-link-bg-active: darken($topbar-bg, 3%);
 
 // $topbar-dropdown-label-color: #555;

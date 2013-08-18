@@ -1,3 +1,55 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-bar-section ul li > a {
+  font-family: 'Alegreya SC', serif;
+}
+.hero {
+  text-align: center;
+  h1 {
+    font-family: 'Alegreya SC', serif;
+    font-size: 3.2em;
+  }
+  p {
+    font-size: 1.6em;
+  }
+}
+.name {
+  h1 {
+    font-family: 'Source Code Pro', sans-serif;
+  }
+}
+
+.letter {
+  input {
+   // font-size: 22px;
+   // line-height: 30px;
+  }
+}
+
+#send-letter {
+  label {
+  font-family: 'Alegreya SC', serif;
+}
+  .blurb {
+    height:460px;
+    // font-size: 22px;
+    // line-height: 30px;
+  }
+}
+
+.complaint {
+  .button {
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+  }
+  .send {
+    .button {
+      padding: 20px 0px;
+    }
+  }
+
+}
+
