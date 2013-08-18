@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'compass-rails'
 gem 'zurb-foundation', "~> 4.3.1"
+gem 'activeresource', require:'active_resource'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
