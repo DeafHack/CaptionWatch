@@ -1,0 +1,2 @@
+class Compliant < ApplicationModel
+end
