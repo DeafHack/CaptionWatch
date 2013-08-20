@@ -3,18 +3,12 @@ class ComplaintsController < ApplicationController
     # @company = Company.create(params)
     # @product = Product.create(params)
     params[:complaint][:product_id]=1
-    @complaint = Complaint.create(params)
+    @complaint = Complaint.new(params)
 
-    # if @complaint.save!
-    #   binding.remote_pry
-    #   respond_to do |format|
-    #     format.html { redirect_to root_path }
-    #     format.json { render json: @complaint}
-    #   end
-    # else
-    #     render 'show'
-    # end
-
+    if @complaint.save
+      session[:complaint_id]= @complaint.id
+      redirect_to '/thanks'
+    end
   end
 
   def index
