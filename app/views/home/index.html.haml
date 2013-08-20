@@ -11,29 +11,33 @@
 .row
   .letter
     .large-12.columns
-      %h2 Send to Congress
-      %form#send-letter
-        .large-6.columns
-          .panel
-            %label Company Name
-            %input#task_name{company: "company[name]", type: "text"}
-          .panel
-            %label Product Name
-            %input#task_name{product: "product[name]", type: "text"}
-          .panel
-            %label Url
-            .row.collapse
-              .small-3.large-2.columns
-                %span.prefix http://
-              .small-9.large-10.columns
-                %input{:placeholder => "Enter your URL...", :type => "text"}
-          .panel
-            %label Address
-            %input#task_name{address: "complaint[name]", type: "text"}
-        .large-6.columns.complaint
-          .panel
-            %label Letter <span><a class="button small">ASL</a></span>
-            %textarea#task_name{blurb: "complaint[blurb]", type: "text", class: "blurb", placeholder: "The Washington Post and the Guardian recently published reports based on information provided by an intelligence contractor showing how the NSA and the FBI are gaining broad access to data collected by nine of the leading U.S. Internet companies and sharing this information with foreign governments. As reported, the U.S. government is extracting audio, video, photographs, e-mails, documents, and connection logs that enable analysts to track a person's movements and contacts over time. As a result, the contents of communications of people both abroad and in the U.S. can be swept in without any suspicion of crime or association with a terrorist organization."}
-          .send
-            %input{type: "submit", value: "Send Letter", class: "button expand large"}
-          %ul#complaints
+      #send-letter
+        %h2 Send to Congress
+        = simple_form_for Complaint.new do |f|
+          .large-6.columns
+            = fields_for Company.new do |c|
+              .panel
+                = c.label :name
+                = c.text_field :name
+
+            = fields_for Product.new do |p|
+              .panel
+                = p.label :name
+                = p.text_field :name
+              .panel
+                = f.label :url
+                .row.collapse
+                  .small-3.large-2.columns
+                    %span.prefix http://
+                  .small-9.large-10.columns
+                    = f.text_field :url, placeholder: "Enter ur url yo"
+              .panel
+                = f.label :address
+                = f.text_field :address
+
+          .large-6.columns.compliant
+            .panel
+              = f.label :custom_blurb, "Letter <span><a class='button small'>ASL</a></span>".html_safe
+              = f.text_area :custom_blurb, class: "blurb", placeholder: "The Washington Post and the Guardian recently published reports based on information provided by an intelligence contractor showing how the NSA and the FBI are gaining broad access to data collected by nine of the leading U.S. Internet companies and sharing this information with foreign governments. As reported, the U.S. government is extracting audio, video, photographs, e-mails, documents, and connection logs that enable analysts to track a person's movements and contacts over time. As a result, the contents of communications of people both abroad and in the U.S. can be swept in without any suspicion of crime or association with a terrorist organization."
+            .send
+              = f.submit "Send Letter", class: "button expand large"

@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+label {
+  font-family: 'Alegreya SC', serif;
+}
+
 .top-bar-section ul li > a {
   font-family: 'Alegreya SC', serif;
 }
@@ -28,10 +32,8 @@
   }
 }
 
+
 #send-letter {
-  label {
-  font-family: 'Alegreya SC', serif;
-}
   .blurb {
     height:460px;
     // font-size: 22px;
