@@ -33,28 +33,9 @@
             / Right Nav Section
             %ul.right
               %li
-                %a{:href => "/"} ABOUT
+                %a{:href => "/about"} ABOUT
               %li
-                %a{:href => "#"} STATS
+                %a{:href => "/stats"} STATS
     = yield
     = javascript_include_tag "application"
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", :type => "text/javascript"}
-    %script{:charset => "utf-8", :type => "text/javascript"}
-      $(function() {
-      function addCompliant(compliant) {
-      $('#compliants').append('
-      %li
-        ' + compliant.name + '
-        ');
-        }
-        
-        $('#send-letter').submit(function(e) {
-        $.post('/complaints', $(this).serialize(), addComplaint);
-        this.reset();
-        e.preventDefault();
-        });
-        
-        $.getJSON('/compliants', function(compliants) {
-        $.each(compliants, function() { addCompliant(this); });
-        });
-        });

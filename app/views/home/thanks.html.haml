@@ -2,5 +2,11 @@
   .large-12.columns
     %h1 Thank you.
     .large-8.columns.large-centered
-      We will deliver an email on your behalf to Congress as part of our call for improvement of accessiblity.
-      = @complaint.blurb
+      %h3 We will deliver an email on your behalf to Congress as part of our call for improvement of accessiblity.
+.row
+  .large-6.columns
+    .panel
+      %h3 Your letter
+      %h4 To:
+      %p
+        = @complaint.blurb

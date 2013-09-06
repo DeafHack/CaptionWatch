@@ -7,6 +7,7 @@ CaptionWatch::Application.routes.draw do
   resources :complaints
   root to: "home#index"
   get '/thanks', to: 'home#thanks'
+  get '/stats', to: 'home#stats'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

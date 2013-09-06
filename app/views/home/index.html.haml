@@ -17,22 +17,22 @@
           .large-6.columns
             = fields_for Company.new do |c|
               .panel
-                = c.label :name
+                = c.label :name, "Company Name"
                 = c.text_field :name, value: "Netflix"
 
             = fields_for Product.new do |p|
               .panel
-                = p.label :name
+                = p.label :name, "Product Name"
                 = p.text_field :name, value: "House of Cards"
               .panel
-                = f.label :url
+                = f.label :url, "Problem url"
                 .row.collapse
                   .small-3.large-2.columns
                     %span.prefix http://
                   .small-9.large-10.columns
                     = f.text_field :url, placeholder: "Enter ur url yo", value: "http://netflix.com/houseofcards"
               .panel
-                = f.label :address
+                = f.label :address, "Your address"
                 = f.text_field :address, value: "222 Clearwood Ave Riverside CA"
 
           .large-6.columns.compliant
