@@ -55,3 +55,14 @@ label {
 
 }
 
+.input_error {
+  background: #8C3E44;
+  label {
+    color: white;
+  }
+  .button {
+    background: white;
+    color: #8C3E44;
+  }
+}
+
