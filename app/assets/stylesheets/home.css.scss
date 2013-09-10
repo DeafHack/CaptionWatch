@@ -39,6 +39,12 @@ label {
     // font-size: 22px;
     // line-height: 30px;
   }
+  .panel {
+    margin-bottom: 0px;
+  }
+  .fieldbox {
+    margin-bottom: 1.25em;
+  }
 }
 
 .complaint {
@@ -66,3 +72,7 @@ label {
   }
 }
 
+::selection, ::-moz-selection {
+       background-color: #8C3E44;
+       color: #fff;
+}

@@ -8,11 +8,15 @@ $( document ).ready(function() {
   emptyerror = "Please fill out this field.";
   emailerror = "Please enter a valid email.";
 
+  $(".hero").on("click", function() {
+  });
+
   $("#new_complaint").on("submit", function(){
-		for (i=0;i<required.length;i++) {
+    $.each(required, function(i, l) {
 			var input = $('#'+required[i]);
 			if ((input.val() == "") || (input.val() == emptyerror)) {
 				input.addClass("needsfilled");
+        input.parents(".fieldbox").effect('shake', {times: 2, distance: 5}, 300);
 				input.parent().addClass("input_error");
 				input.val(emptyerror);
 				errornotice.fadeIn(750);
@@ -20,11 +24,12 @@ $( document ).ready(function() {
 				input.removeClass("needsfilled");
 				input.parent().removeClass("input_error");
 			}
-		}
+		});
 
-    if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email.val())) {
+    if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email.val()) && (email.val() != "")) {
 			email.addClass("needsfilled");
 			email.parent().addClass("input_error");
+      email.parents(".fieldbox").effect('shake', {times: 2, distance: 5}, 300);
 			email.val(emailerror);
 		}
 
@@ -41,6 +46,10 @@ $( document ).ready(function() {
 			$(this).val("");
 			$(this).removeClass("needsfilled");
 	   }
+
+     if ($(this).has("#complaint_email") ){
+      $(this).parent().removeClass("input_error");
+     }
 	});
 
 	$(":input").keypress(function(){
