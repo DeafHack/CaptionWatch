@@ -46,11 +46,13 @@ $( document ).ready(function() {
 			$(this).val("");
 			$(this).removeClass("needsfilled");
 	   }
+	});
 
-     if ($(this).has("#complaint_email") ){
+  $("#complaint_email").focus(function() {
+     if ($(this).has("complaint_email") ){
       $(this).parent().removeClass("input_error");
      }
-	});
+  });
 
 	$(":input").keypress(function(){
 	   if ($(this).parent().hasClass("input_error") ) {
